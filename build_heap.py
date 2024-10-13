@@ -6,7 +6,7 @@ class Heap:
     def insert(self, ele):
         self.heap_list.append(ele)
         
-        idx = len(self.heap_list) - 1
+        idx = len(self.heap_list) - 1 //this index is used to find the position of last element inserted 
         parent = idx //2
         print("parent is",parent)
         print("idx is",idx)
