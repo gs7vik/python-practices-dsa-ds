@@ -1,8 +1,3 @@
-try:
-    idsa 
-    
-except Exception as e:  #using just Exception is totally wrong 
-    print("some error"+str(e))
-
-print("hello world")
-
+import math
+x = -4.2
+print((math.ceil(x))*-1)
