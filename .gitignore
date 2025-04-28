@@ -1,0 +1,14 @@
+.venv
+/venv
+__pycache__/
+*.py[cod]
+*.pyo
+    /logs
+    logs
+*.log
+*.sqlite3   
+*.db
+         
+
+
+
