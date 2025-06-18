@@ -42,11 +42,16 @@ def compute_tf(doc_tokens):
 #idf is calculated across all documents
 # Step 3: Compute document frequencies (DF) and inverse document frequencies (IDF)
 def compute_idf(all_docs):
+    #all docs is a list of tokenized documents
+    #[['the', 'sky', 'is', 'blue'], ['the', 'sun', 'is', 'bright'], ['the', 'sun', 'in', 'the', 'blue', 'sky', 'is', 'bright'], ['we', 'can', 'see', 'the', 'shining', 'sun,', 'the', 'bright', 'sun']]
     idf_scores = {}
+    
     total_docs = len(all_docs)
     all_tokens = set(token for doc in all_docs for token in doc)
     for token in all_tokens:
         doc_count = sum(1 for doc in all_docs if token in doc)
+        #doc_count refers to corpus frequency of the term, i.e. how many documents contain the term
+        
         idf_scores[token] = math.log(total_docs / (1 + doc_count)) + 1  # +1 to avoid div by zero
     return idf_scores
 
@@ -69,3 +74,4 @@ for i, doc_tokens in enumerate(tokenized_docs):
 #high-tf-idf score indicates that the term is frequent in the current document but rare in the corpus → very important/relevant to this document.
 #low-tf-idf score indicates that the term is either common across documents or not frequent in the current document → less important/relevant to this document.
 #zero-tf-idf score indicates that the term is not present in the current document → not relevant to this document. or appears in all docs.
+#real world scores lie between 0 to 2 
