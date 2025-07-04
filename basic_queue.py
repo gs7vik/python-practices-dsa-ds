@@ -41,6 +41,16 @@ print("Deque elements:", d)
 while d:
     print(d.popleft())  #popleft method removes and returns an item from the left end of the deque
     
+#lets say you got a situation where you need to store the queue item in following order: ((1,2),3)
+#to handle this you can use the following code
+
+dq = deque([((1, 2), 3)])
+(r, c), t = dq.popleft()
+
+print(r)  # 1
+print(c)  # 2
+print(t)  # 3
+
     
     
 # Using list as a queue (not recommended for large data sets)
