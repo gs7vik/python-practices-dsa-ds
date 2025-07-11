@@ -1,3 +1,4 @@
+#TOpological sorting DFS way
 class Solution:
     
     def topoSort(self, V, edges):
@@ -37,3 +38,4 @@ if __name__ == "__main__":
     solution = Solution()
     result = solution.topoSort(V, edges)
     print("Topological Sort:", result)  # Output: Topological Sort: [5, 4, 2, 3, 1, 0]
+    
