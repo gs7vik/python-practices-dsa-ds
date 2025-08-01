@@ -1,4 +1,11 @@
 #dijkstra's algo can be applied only to graphs with non-negative weights
+"""
+Why priority queue in Dijkstra?
+In BFS, we process nodes level by level.
+
+But in Dijkstra, we always want to process the node with the currently known smallest distance — this is why we use a priority queue (min-heap via heapq).
+that is why its also called a greedy algorithm.
+"""
 class Solution:
     # Returns shortest distances from src to all other vertices
     def dijkstra(self, V, edges, src):
