@@ -70,10 +70,4 @@ if dsu.find_ultimate_parent(3) == dsu.find_ultimate_parent(7):
 else:
     print("not same") 
 
-#will print same 
-
-
-
-            
-        
-        
+#will print same
