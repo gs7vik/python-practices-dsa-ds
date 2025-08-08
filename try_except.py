@@ -4,4 +4,12 @@ try:
 except Exception as e:
     print("a not accessible")
     
-print(a)
+print(a) #1
+
+try:
+    b = 2 
+    print(" b is 2")
+except Exception as e:
+    print("b value not foud")
+finally:
+    print("This will always execute")
