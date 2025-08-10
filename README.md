@@ -14,12 +14,13 @@ when you want to search an element from a list consider using a set too, as sear
 imo a surprising behavior of .append() with mutable data types
 .append actually just creates a reference to the variable that you are passing, if you change that variable then the original result will also have the same changes. Beware of this.
 example:
+```
 num = [1, 2]
 res = []
 res.append(num)   # res now has a REFERENCE to num
 num.clear()       # modifies the same list object
 print(res)        # prints [[]], because num changed 
-
+```
 To avoid that either do one of the following:
 1. use list(num) while appending (it creates a new object instead of referencing back to the same object)
 2. use num[:] while appending
