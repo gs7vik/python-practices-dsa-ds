@@ -19,3 +19,7 @@ res = []
 res.append(num)   # res now has a REFERENCE to num
 num.clear()       # modifies the same list object
 print(res)        # prints [[]], because num changed 
+
+To avoid that either do one of the following:
+1. use list(num) while appending (it creates a new object instead of referencing back to the same object)
+2. use num[:] while appending
