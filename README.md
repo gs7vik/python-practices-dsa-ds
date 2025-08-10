@@ -10,3 +10,12 @@ When the keys of the dictionary are 0, 1, ..., n, a list will be faster, since n
 https://stackoverflow.com/questions/15990456/list-of-lists-vs-dictionary
 
 when you want to search an element from a list consider using a set too, as search operation in **set** is O(1) as it uses hashtable internally
+
+imo a surprising behavior of .append() with mutable data types
+.append actually just creates a reference to the variable that you are passing, if you change that variable then the original result will also have the same changes. Beware of this.
+example:
+num = [1, 2]
+res = []
+res.append(num)   # res now has a REFERENCE to num
+num.clear()       # modifies the same list object
+print(res)        # prints [[]], because num changed 
