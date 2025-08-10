@@ -1,6 +1,9 @@
-# n = 10000000
+n = 10000000
+m = 10
+print(bin(m).count('1')) #2  # prints the count of '1's in the binary representation of m
 # print(bin(n)[2:])  # prints binary representation of n without '0b' prefix, good for production use
-
+cnt = bin(n).count('1')  # counts the number of '1's in the binary representation
+print(cnt)  #8 # prints the count of '1's in the binary representation
 # #manually converting to binary
 # n = 10
 # binary = ''
@@ -15,13 +18,13 @@
 # print(binary)
 # #the count_1 will give you the number of 1's in the binary representation
 
-s = 'aba'
+# s = 'aba'
 
-def pali(s):
-    # print(s[::-1])
-    return s[::-1]
+# def pali(s):
+#     # print(s[::-1])
+#     return s[::-1]
 
-if s == pali(s):
-    print("pali")
-else:
-    print('not pali')
+# if s == pali(s):
+#     print("pali")
+# else:
+#     print('not pali')
