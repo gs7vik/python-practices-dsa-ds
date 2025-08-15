@@ -19,6 +19,10 @@ def fibo(n,dp):
     dp[n] = fibo(n-1,dp) + fibo(n-2,dp)
     return dp[n]
 
+#if question is about maximum
+#then slight change will be there
+#you will store the maximum value in dp[n] instead of sum
+
 n = 5
 dp = [-1]*(n+1)
 

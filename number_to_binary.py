@@ -1,6 +1,6 @@
-n = 10000000
-m = 10
-print(bin(m).count('1')) #2  # prints the count of '1's in the binary representation of m
+n = -3
+# m = 10
+# print(bin(m).count('1')) #2  # prints the count of '1's in the binary representation of m
 # print(bin(n)[2:])  # prints binary representation of n without '0b' prefix, good for production use
 cnt = bin(n).count('1')  # counts the number of '1's in the binary representation
 print(cnt)  #8 # prints the count of '1's in the binary representation
