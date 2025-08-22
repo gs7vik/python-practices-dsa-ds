@@ -20,4 +20,5 @@ def printSubArrays(arr, start, end):
 
 # Driver code
 arr = [1, 2, 3]
+#
 printSubArrays(arr, 0, 0)
