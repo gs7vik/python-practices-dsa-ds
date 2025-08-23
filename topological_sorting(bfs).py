@@ -12,6 +12,7 @@ class Solution:
         print(adj_list)
         indeg = [0]*numCourses
         for ele in adj_list:
+            
             for a in ele:
                 indeg[a] +=1 
        
