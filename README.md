@@ -24,3 +24,14 @@ print(res)        # prints [[]], because num changed
 To avoid that either do one of the following:
 1. use list(num) while appending (it creates a new object instead of referencing back to the same object)
 2. use num[:] while appending
+
+for things related to string avoid the following:
+num = ""
+for d in digs:
+    num += str(d)
+
+above takes O(n^2) TC
+
+instead try to follow the below for longer strings
+
+num = "".join(str(d) for d in digs)
