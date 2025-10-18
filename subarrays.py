@@ -10,6 +10,7 @@ def printSubArrays(arr, start, end):
 
     # Increment the end point and start from 0
     elif start > end:
+        print("here")
         return printSubArrays(arr, 0, end + 1)
 
     # Print the subarray and increment the starting
@@ -21,22 +22,22 @@ def printSubArrays(arr, start, end):
 # Driver code
 arr = [1, 2, 3]
 #
-# printSubArrays(arr, 0, 0)
+printSubArrays(arr, 0, 0)
 
 #brute force solution
-def print_all_subarrays(arr):
-    n = len(arr)
-    # Fix starting index i
-    for i in range(n):
-        # Fix ending index j
-        for j in range(i, n):
-            # Print subarray from i to j
-            sum = 0
-            for k in range(i,j+1):
-                sum += arr[k]
-            print(sum)
+# def print_all_subarrays(arr):
+#     n = len(arr)
+#     # Fix starting index i
+#     for i in range(n):
+#         # Fix ending index j
+#         for j in range(i, n):
+#             # Print subarray from i to j
+#             sum = 0
+#             for k in range(i,j+1):
+#                 sum += arr[k]
+#             print(sum)
 
-# Example
-arr = [1, 2, 3, 4]
-print_all_subarrays(arr)
+# # Example
+# arr = [1, 2, 3, 4]
+# print_all_subarrays(arr)
 
